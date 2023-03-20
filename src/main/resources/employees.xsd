@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://javalearner.com/ws"
+	targetNamespace="http://javalearner.com/ws" elementFormDefault="qualified">
+	<xs:element name="getEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence></xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="employee">
+		<xs:sequence>
+			<xs:element name="lastname" type="xs:string" />
+			<xs:element name="firstname" type="xs:string" />
+			<xs:element name="hobby" type="xs:string" />
+			<xs:element name="city" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
